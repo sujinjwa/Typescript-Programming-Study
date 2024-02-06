@@ -255,3 +255,31 @@ function readonly(writable: boolean) {
   }
 }
 ```
+
+## final 클래스
+
+생성자를 private로 선언하면 인스턴스를 생성하거나 클래스를 확장할 수 없게 됩니다.
+
+```ts
+class FinalClass {
+  private constructor() {}
+}
+```
+
+클래스 상속만 막아야 하지만 생성자를 private로 선언하게 되면 클래스를 인스턴스화 하는 기능까지 사라집니다.
+이런 경우 자기 자신을 반환하는 static 메서드를 통해 해결할 수 있습니다.
+
+```ts
+class FinalClass {
+  private constructor() {}
+  static create() {
+    return FinalClass();
+  }
+}
+```
+
+## 디자인 패턴
+
+### 팩토리 패턴
+
+팩토리 패턴은 어떤 객체를 만들지를 전적으로 팩토리에 위임하는 패턴입니다.
