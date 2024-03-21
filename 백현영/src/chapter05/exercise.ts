@@ -1,4 +1,4 @@
-import { BalletFlat, Boot, Sneaker } from './(11)designPattern';
+import { BalletFlat, Boot, Sneaker } from './11_designPattern';
 
 // 1. 클래스와 인터페이스의 차이는 무엇인가?
 // : 클래스는 타입과 값 모두를 가질 수 있지만 인터페이스는 타입만을 가질 수 있다.

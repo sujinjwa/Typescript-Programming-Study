@@ -43,7 +43,7 @@ function withForceStartFly<
       to: string;
       distance: number;
     };
-  }>,
+  }>
 >(baseClass: C) {
   return class extends baseClass {
     constructor(...args: any[]) {
